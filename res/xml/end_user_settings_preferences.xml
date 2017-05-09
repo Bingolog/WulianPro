@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="远程连接设置" >
+        <EditTextPreference
+            android:dialogTitle="请输入远程ip地址"
+            android:key="ServerIpAddress"
+            android:summary="点击编辑输入IP地址"
+            android:title="远程IP地址" />
+        <EditTextPreference
+            android:dialogTitle="请输入远程端口号"
+            android:key="ServerPort"
+            android:summary="点击编辑输入端口号"
+            android:title="远程端口号" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="本地串口设置" >
+        <ListPreference
+            android:key="DEVICE"
+            android:persistent="true"
+            android:title="设备列表" >
+        </ListPreference>
+        <ListPreference
+            android:entries="@array/baudrates_name"
+            android:entryValues="@array/baudrates_value"
+            android:key="BAUDRATE"
+            android:persistent="true"
+            android:title="波特率" >
+        </ListPreference>
+
+        <EditTextPreference
+            android:dialogTitle="请输入实验箱节点编号"
+            android:key="LocalNodeNumber"
+            android:summary="点击编辑输入实验箱节点编号"
+            android:title="节点编号" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
